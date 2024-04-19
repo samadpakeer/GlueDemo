@@ -1,4 +1,4 @@
-port sys
+import sys
 from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
@@ -13,5 +13,7 @@ glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
+
+#test print statement
 print("Glue job testing for jenkins")
 job.commit()
